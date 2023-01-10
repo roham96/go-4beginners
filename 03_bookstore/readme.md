@@ -11,6 +11,7 @@ go mod tidy
 
 ### To start web server, run :
 ```sh
+go build
 go run cmd/main/main.go 
 ```
 
