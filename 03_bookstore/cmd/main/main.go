@@ -1,17 +1,17 @@
 package main
 
-
-import(
+import (
 	"log"
 	"net/http"
-	"github.com/gorilla/mux"
+
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/roham96/go-bookstore/pkg/routes"
+	"github.com/gorilla/mux"
+	"github.com/your-example-username/go-bookstore/pkg/routes"
 )
 
-func main(){
+func main() {
 	r := mux.NewRouter()
 	routes.RegisterBookstoreRoutes(r)
-	http.Handle("/",r)
+	http.Handle("/", r)
 	log.Fatal(http.ListenAndServe("localhost:8080", r))
 }

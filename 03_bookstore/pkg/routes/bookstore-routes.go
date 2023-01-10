@@ -1,13 +1,12 @@
 package routes
 
-
-import(
+import (
 	"github.com/gorilla/mux"
-	"github.com/roham96/go-bookstore/pkg/controllers"
+	"github.com/your-example-username/go-bookstore/pkg/controllers"
 )
 
-var RegisterBookstoreRoutes = func(router *mux.Router){
-	
+var RegisterBookstoreRoutes = func(router *mux.Router) {
+
 	router.HandleFunc("/book/", controllers.GetBooks).Methods("GET")
 	router.HandleFunc("/book/{bookId}", controllers.GetBookById).Methods("GET")
 	router.HandleFunc("/book/", controllers.CreateBook).Methods("POST")
