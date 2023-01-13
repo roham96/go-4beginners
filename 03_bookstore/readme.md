@@ -1,7 +1,7 @@
 #
 #
 #
-##  Make movies crud using go
+##  Make bookstore using go
 
 ### Before starting the web server run the following command:
 ```sh
